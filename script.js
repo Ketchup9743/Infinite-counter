@@ -4,18 +4,22 @@ let clickCount = 0;
 
 const container = document.getElementById("popup-container");
 
-if (container) {
-    container.addEventListener("click", (event) => {
-        if (event.target.closest(".doom-popup")) {
-            clickCount++;
-            alert(clickCount % 25 === 0 ? "Why do you keep clicking this?" : "Nothing Here :)");
-        }
-    });
+function show_click_message() {
+    clickCount++;
+    alert(clickCount % 25 === 0 ? "Why do you keep clicking this?" : "Nothing Here :)");
 }
 
 function spawn_doom_popup() {
     if (container) {
-        container.innerHTML = '<button class="doom-popup" type="button">' + counter + '</button>';
+        let popup = container.querySelector(".doom-popup");
+        if (!popup) {
+            popup = document.createElement("button");
+            popup.className = "doom-popup";
+            popup.type = "button";
+            popup.addEventListener("click", show_click_message);
+            container.appendChild(popup);
+        }
+        popup.textContent = counter;
         counter++;
     }
     requestAnimationFrame(spawn_doom_popup);
