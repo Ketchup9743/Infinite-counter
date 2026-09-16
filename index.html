@@ -3,25 +3,24 @@
     <head>
         <title>The Infinite Counter</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://pyscript.net" />
-        <script type="module" src="https://pyscript.net"></script>
     </head>
     <body>
 
         <h1>The Infinite Counter of Doom 🚨</h1>
-        <h2 id="counter-display">Loading Python Engine...</h2>
+        <h2 id="counter-display">Initializing Counter...</h2>
 
-        <script type="py">
-            from pyscript import window, document
+        <script>
+            let counter = 1;
 
-            state = {"counter": 1}
+            function trigger_doom_counter() {
+                const displayElement = document.getElementById("counter-display");
+                if (displayElement) {
+                    displayElement.innerHTML = "DOOM COUNTER: " + counter;
+                    counter++;
+                }
+            }
 
-            def trigger_doom_counter():
-                display_element = document.querySelector("#counter-display")
-                display_element.innerHTML = f"DOOM COUNTER: {state['counter']}"
-                state["counter"] += 1
-
-            window.setInterval(trigger_doom_counter, 500)
+            setInterval(trigger_doom_counter, 500);
         </script>
 
     </body>
