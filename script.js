@@ -6,7 +6,7 @@ const container = document.getElementById("popup-container");
 
 function show_click_message() {
     clickCount++;
-    alert(clickCount % 25 === 0 ? "Why do you keep clicking this?" : "Nothing Here :)");
+    window.alert(clickCount % 25 === 0 ? "Why do you keep clicking this?" : "Nothing Here :)");
 }
 
 function spawn_doom_popup() {
@@ -16,7 +16,7 @@ function spawn_doom_popup() {
             popup = document.createElement("button");
             popup.className = "doom-popup";
             popup.type = "button";
-            popup.addEventListener("click", show_click_message);
+            popup.onclick = show_click_message;
             container.appendChild(popup);
         }
         popup.textContent = counter;
