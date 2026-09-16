@@ -23,4 +23,4 @@ function spawn_doom_popup() {
     }
     requestAnimationFrame(spawn_doom_popup);
 }
-requestAnimationFrame(spawn_doom_popup);
+requestAnimationFrame(spawn_doom_popup);}
