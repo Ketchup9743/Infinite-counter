@@ -3,26 +3,26 @@
     <head>
         <title>The Infinite Counter</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
-        <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+        <link rel="stylesheet" href="https://pyscript.net" />
+        <script type="module" src="https://pyscript.net"></script>
     </head>
     <body>
 
         <h1>The Infinite Counter of Doom 🚨</h1>
-        <p>Loading Python... The alerts will start automatically.</p>
+        <h2 id="counter-display">Loading Python Engine...</h2>
 
         <script type="py">
-            from pyscript import window
+            from pyscript import window, document
 
             state = {"counter": 1}
 
-            def trigger_doom_alert():
-                window.alert(f"DOOM COUNTER: {state['counter']}")
+            def trigger_doom_counter():
+                display_element = document.querySelector("#counter-display")
+                display_element.innerHTML = f"DOOM COUNTER: {state['counter']}"
                 state["counter"] += 1
 
-            window.setInterval(trigger_doom_alert, 500)
+            window.setInterval(trigger_doom_counter, 500)
         </script>
 
     </body>
 </html>
-
