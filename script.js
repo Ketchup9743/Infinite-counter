@@ -8,7 +8,7 @@ if (container) {
     container.addEventListener("click", (event) => {
         if (event.target.closest(".doom-popup")) {
             clickCount++;
-            alert(clickCount === 25 ? "Why do you keep clicking this?" : "Nothing Here :)");
+            alert(clickCount % 25 === 0 ? "Why do you keep clicking this?" : "Nothing Here :)");
         }
     });
 }
