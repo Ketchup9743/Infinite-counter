@@ -3,10 +3,12 @@
     <head>
         <title>The Infinite Counter</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://pyscript.net">
+        <link rel="stylesheet" href="https://pyscript.net" />
         <script type="module" src="https://pyscript.net"></script>
     </head>
     <body>
-        <py-script src="math.py"></py-script>
+        <script type="py" config='{"files": ["./math_logic.py"]}'>
+            import math_logic
+        </script>
     </body>
 </html>
