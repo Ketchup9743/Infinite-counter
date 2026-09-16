@@ -1,6 +1,6 @@
 body {
     background-color: #1a1a1a;
-    color: #a461aa;
+    color: #7e4f83;
     font-family: Arial, sans-serif;
     text-align: center;
     padding-top: 50px;
@@ -17,10 +17,9 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #3d3939;
-    color: #a461aa;
+    color: #7e4f83;
     padding: 30px 60px;
     border: 4px solid #000000;
-    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
