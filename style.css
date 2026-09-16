@@ -11,6 +11,14 @@ h1 {
     text-transform: uppercase;
 }
 
+#click-counter {
+    position: fixed;
+    bottom: 12px;
+    left: 12px;
+    font-size: 0.9rem;
+    color: #b7a0bb;
+}
+
 .doom-popup {
     position: fixed;
     top: 50%;
